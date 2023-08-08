@@ -15,15 +15,25 @@
     <script type="text/babel">
       "use strict";
       {
+
+        //Componentの定型文
+        const Menu = () => {
+          return (
+            <li>牛丼牛丼</li>
+          );
+
+        };
+          
+
         //コンポーネントを作成
         const App = () => {
           return (
             <>
               <h1>コンポーネントにしたメニュー</h1>
               <ul className="menus">
-                <li>牛丼</li>
-                <li>牛丼</li>
-                <li>牛丼</li>
+                <Menu />
+                <Menu />
+                <Menu />
               </ul>
               <p>合計:0円</p>
             </>
@@ -31,7 +41,7 @@
         };
 
 
-        
+
 
 
         const container = document.querySelector("#container");
