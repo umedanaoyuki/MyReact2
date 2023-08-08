@@ -17,11 +17,16 @@
       {
         //Componentの定型文
         const Menu = (props) => {
+
+          //ユーザーの操作で変化させる場合の状態管理
+          const [count, setCount] = React.useState(0);
+
+
           return (
             <li>
               <button>-</button>
               <button>+</button>
-              {props.name}: {props.price}円
+              {props.name}: ({props.price}円 * {count}個)
             </li>
           );
         };
