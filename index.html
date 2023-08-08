@@ -17,9 +17,9 @@
       {
 
         //Componentの定型文
-        const Menu = () => {
+        const Menu = (props) => {
           return (
-            <li>牛丼牛丼</li>
+            <li>{props.name}</li>
           );
 
         };
@@ -31,9 +31,9 @@
             <>
               <h1>コンポーネントにしたメニュー</h1>
               <ul className="menus">
-                <Menu />
-                <Menu />
-                <Menu />
+                <Menu name="牛丼"/>
+                <Menu name="カレー"/>
+                <Menu name="サラダ"/>
               </ul>
               <p>合計:0円</p>
             </>
