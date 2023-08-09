@@ -27,7 +27,7 @@
           };
 
           const increment = () => {
-            props.onIncrememnt();
+            props.onIncrememnt(props.menuId);
             // setCount(count +1)
           };
 
@@ -53,13 +53,17 @@
 
           const decrement = (menuId) => {
             // console.log('decrement');
+            if (counts[menuId] > 0) {
             const newCounts = [...counts];
             newCounts[menuId]--;
-            setCounts(newCounts);
+            setCounts(newCounts);}
           };
 
-          const increment = () => {
+          const increment = (menuId) => {
             // console.log('increment');
+            const newCounts = [...counts];
+            newCounts[menuId]++;
+            setCounts(newCounts);
 
           };
             
